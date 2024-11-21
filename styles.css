@@ -73,30 +73,33 @@ ul li {
 }
 
 /* Sección Hoteles */
-section#hoteles div {
+.contenedor  {
     display: flex; /* Cambiado a flex para mejor organización */
     flex-direction: column; /* Organiza los elementos en columna */
     align-items: center;
     gap: 20px; /* Espaciado uniforme entre elementos */
+    flex:auto; /* Ajusta el tamaño de los elementos según el contenido */ 
 }
 
-section#hoteles div div {
+.fila {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 25px;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    flex:auto;
 }
 
-section#hoteles div div div {
+.objetos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
+    flex:auto;x:auto;
 }
 
-section#hoteles div div img {
+.objetos img {
     border: 2px solid #003366;
     border-radius: 8px;
     width: 200px;
