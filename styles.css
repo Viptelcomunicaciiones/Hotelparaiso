@@ -20,6 +20,7 @@ header h1 {
     font-size: 2.5rem; /* Establece el tamaño de la fuente del título principal. */
 }
 
+/* Navegación */
 nav ul {
     list-style: none; /* Elimina los puntos o números de la lista de navegación. */
     padding: 0; /* Elimina el relleno interno de la lista. */
@@ -71,70 +72,68 @@ ul li {
     margin-bottom: 10px; /* Añade espacio entre los elementos de las listas. */
 }
 
-/* hoteles */
-
+/* Sección Hoteles */
 section#hoteles div {
-   	display: block; /* Organiza los elementos de la galería en línea. */
-    	justify-content: center; /* Distribuye los elementos con espacio entre ellos. */
-	align-items:center;
-	flex:auto;
+    display: flex; /* Cambiado a flex para mejor organización */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center;
+    gap: 20px; /* Espaciado uniforme entre elementos */
 }
 
 section#hoteles div div {
-    	display: flex; /* Organiza los elementos de la galería en línea. */
-    	justify-content: center; /* Distribuye los elementos con espacio entre ellos. */
-    	flex-direction: row; /* Permite que los elementos se envuelvan en varias líneas si es necesario. */
-	align-items:center;
-   	gap: 15px; /* Espaciado uniforme entre elementos de la galería. */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
 
-section#hoteles div div	div {
-    	display: flex; /* Organiza los elementos de la galería en línea. */
-    	justify-content: center; /* Distribuye los elementos con espacio entre ellos. */
-    	flex-direction: column; /* Permite que los elementos se envuelvan en varias líneas si es necesario. */
-	align-items:center;
-   	gap: 15px; /* Espaciado uniforme entre elementos de la galería. */
+section#hoteles div div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 section#hoteles div div img {
-    border: 2px solid #003366; /* Añade un borde azul alrededor de las imágenes. */
-    border-radius: 8px; /* Bordes redondeados para las imágenes. */
-    width: 200px; /* Fija el ancho de las imágenes a 200px. */
-    height: auto; /* Ajusta automáticamente la altura para mantener la proporción. */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar las imágenes. */
+    border: 2px solid #003366;
+    border-radius: 8px;
+    width: 200px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Galería */
+/* Sección Galería */
 section#galeria div {
-    display: flex; /* Organiza los elementos de la galería en línea. */
-    justify-content: space-around; /* Distribuye los elementos con espacio entre ellos. */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario. */
-    gap: 15px; /* Espaciado uniforme entre elementos de la galería. */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 section#galeria img {
-    border: 2px solid #003366; /* Añade un borde azul alrededor de las imágenes. */
-    border-radius: 8px; /* Bordes redondeados para las imágenes. */
-    width: 200px; /* Fija el ancho de las imágenes a 200px. */
-    height: auto; /* Ajusta automáticamente la altura para mantener la proporción. */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar las imágenes. */
+    border: 2px solid #003366;
+    border-radius: 8px;
+    width: 200px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Pie de página */
 footer {
-    background-color: #003366; /* Fondo azul fuerte para el pie de página. */
-    color: #ffffff; /* Texto blanco para contraste con el fondo. */
-    text-align: center; /* Centra el texto en el pie de página. */
-    padding: 15px; /* Añade espacio interno alrededor del contenido del pie de página. */
-    margin-top: 20px; /* Espacio superior para separar el pie de página del contenido principal. */
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
 
 footer a {
-    color: #00bfff; /* Azul cielo para los enlaces en el pie de página. */
-    text-decoration: none; /* Elimina el subrayado de los enlaces en el pie de página. */
+    color: #00bfff;
+    text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Añade un subrayado al pasar el ratón sobre los enlaces. */
+    text-decoration: underline;
 }
