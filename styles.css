@@ -11,13 +11,29 @@ body {
 header {
     background-color: #003366; /* Fondo azul fuerte para el encabezado. */
     color: #ffffff; /* Texto blanco para contraste con el fondo. */
-    padding: 20px; /* Añade espacio interno alrededor del contenido del encabezado. */
+    padding: 15px 20px; /* Añade espacio interno alrededor del contenido del encabezado. */
     text-align: center; /* Centra el texto del encabezado. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 header h1 {
     margin: 0; /* Elimina el margen superior e inferior del título principal. */
     font-size: 2.5rem; /* Establece el tamaño de la fuente del título principal. */
+    padding: 10px 20px;
+    text-align: center;
 }
 
 /* Navegación */
@@ -27,40 +43,55 @@ nav ul {
     margin: 0; /* Elimina los márgenes alrededor de la lista. */
     display: flex; /* Hace que los elementos de la lista se organicen en línea. */
     justify-content: center; /* Centra los elementos de la lista horizontalmente. */
+    gap: 20px; /* Espaciado entre los elementos de la lista. */
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px; /* Añade espacio horizontal entre los elementos del menú. */
+    margin: 0 20px; /* Añade espacio horizontal entre los elementos del menú. */
 }
 
 nav ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces. */
-    color: #ffffff; /* Establece el color del texto de los enlaces a blanco. */
-    font-weight: bold; /* Hace que el texto de los enlaces sea más grueso. */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
+    color: #ffffff; /* Color de texto blanco. */
+    font-weight: bold; /* Resalta los enlaces con texto en negrita. */
+    padding: 5px 10px; /* Espaciado interno en los enlaces. */
+    border-radius: 4px; /* Bordes redondeados para los enlaces. */
+    transition: background-color 0.7s; /* Suaviza el cambio de color de fondo (opcional). */
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Añade un subrayado cuando se pasa el ratón sobre los enlaces. */
+    background-color: #00bfff; /* Fondo azul claro al pasar el cursor. */
+    color: #000; /* Cambia el color del texto a negro. */
 }
 
+main {
+    padding-top: 120px;
+    min-height: calc(100vh - 160px - 50px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 /* Secciones */
 section {
-    margin: 20px auto; /* Añade espacio superior e inferior y centra horizontalmente. */
-    padding: 20px; /* Añade espacio interno alrededor del contenido de las secciones. */
-    max-width: 900px; /* Limita el ancho máximo de las secciones a 900px. */
-    background-color: #ffffff; /* Fondo blanco para las secciones. */
-    border-radius: 8px; /* Bordes redondeados para un diseño moderno. */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación. */
+    margin: 20px auto; 
+    padding: 20px;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     border-bottom: 2px solid #003366; /* Línea azul debajo de los títulos de las secciones. */
-    padding-bottom: 5px; /* Espacio entre el texto y la línea inferior. */
+    padding-bottom: 5px; /* Reducido el espacio entre el texto y la línea inferior. */
     color: #003366; /* Color azul fuerte para los títulos de las secciones. */
 }
 
 section p, section ul {
     margin: 15px 0; /* Añade espacio vertical alrededor de los párrafos y listas. */
+    line-height: 1.6;
 }
 
 /* Listas */
@@ -74,11 +105,13 @@ ul li {
 
 /* Sección Hoteles */
 .contenedor  {
-    display: flex; /* Cambiado a flex para mejor organización */
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center;
-    gap: 20px; /* Espaciado uniforme entre elementos */
-    flex:auto; /* Ajusta el tamaño de los elementos según el contenido */ 
+    display: flex; /* Activa el modo Flexbox */
+    align-content: center;  /*Centra los elementos verticalmente */
+    flex-wrap: wrap;  /*Permite que los elementos se ajusten a varias líneas */
+    gap: 20px; /* Espaciado entre los elementos */
+    padding: 20px; /* Espaciado interno del contenedor */
+    flex-direction: column; /*  Contenedor  Flexbox */
+    flex:auto; /* Contenedor */ 
 }
 
 .fila {
@@ -92,11 +125,12 @@ ul li {
 }
 
 .objetos {
-    display: flex;
+    color: #333; /* Texto negro legible */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    min-width: 100px; /* Tamaño mínimo de los elementos */
+    flex:auto;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex:auto;x:auto;
 }
 
 .objetos img {
@@ -104,7 +138,13 @@ ul li {
     border-radius: 8px;
     width: 200px;
     height: auto;
+    object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.objetos img:hover {
+    transform: scale(1.05);
 }
 
 /* Sección Galería */
