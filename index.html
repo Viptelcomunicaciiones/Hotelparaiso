@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Hotel Paraíso - Tu destino de lujo y confort.">
         <link href="styles.css" rel="stylesheet" type="text/css">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/5-estrellas.ico" type="image/x-icon">
         <title>Hotel Paraíso</title>
     </head>
     <body>
@@ -52,11 +52,6 @@
 
                     <div class="objetos">
                         <p>Hotel Paraíso Medellín</p>
-                        <img src="img/hotel3.jpg" alt="Hotel Paraíso Medellín">
-                        <p>Descripción del hotel</p>
-                    </div>
-                    <div class="objetos">
-                        <h3>Hotel Paraíso Medellín</h3>
                         <img src="img/hotel3.jpg" alt="Hotel Paraíso Medellín">
                         <p>Descripción del hotel</p>
                     </div>
@@ -141,13 +136,24 @@
         </section>
 
         <!-- Sección de Contacto -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta o deseas hacer una reserva? Contáctanos:</p>
-            <p><strong>Correo:</strong> <a href="mailto:reservas@hotelparaiso.com">reservas@hotelparaiso.com</a></p>
-            <p><strong>Teléfono:</strong> <a href="tel:+1234567890">123-456-7890</a></p>
-            <p><strong>Dirección:</strong> Calle Ejemplo #123, Ciudad Paraíso</p>
-        </section>
+        <div class="contact-section">
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna pregunta o deseas hacer una reserva? Contáctanos:</p>
+                <p><strong>Correo:</strong> <a href="mailto:reservas@hotelparaiso.com">reservas@hotelparaiso.com</a></p>
+                <p><strong>Teléfono:</strong> <a href="tel:+1234567890">123-456-7890</a></p>
+                <p><strong>Dirección:</strong> Calle Ejemplo #123, Ciudad Paraíso</p>
+            </section>
+            <section id="contacto2" class="contact-container">
+                <form action="controlador/crearcontacto.php" method="post">
+                    <h1>Contáctanos</h1>
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="correo" placeholder="Correo electrónico" required>
+                    <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <button type="submit" name="botonregistrar">Enviar</button>
+                </form>
+            </section>
+        </div>
         </main>
 
         <!-- Pie de página -->
